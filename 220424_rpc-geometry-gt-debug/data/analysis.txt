@@ -1,0 +1,37 @@
+old_path=PosixPath('/pad/seyang/workspace/rpc-gt-debug/data/payload-accd477271bd4aeeae63444d03fe5fa8f54324dc.xml')
+new_path=PosixPath('/pad/seyang/workspace/rpc-gt-debug/data/payload-0429f37b6663d8a4075f1d9a761f79cb7c73b91d.xml')
+-------------------------------------------------------------------------------
+REE1 is inconsistent!
+  rot:
+    - old=array([ 0., -1.,  0., -0., -0.,  1., -1., -0., -0.])
+    - new=array([-0.,  1.,  0.,  0., -0., -1., -1., -0., -0.])
+
+REE2 is inconsistent!
+  rot:
+    - old=array([ 0., -1.,  0., -0., -0.,  1., -1., -0., -0.])
+    - new=array([-0.,  1.,  0.,  0., -0., -1., -1., -0., -0.])
+
+REE3 is inconsistent!
+  rot:
+    - old=array([ 0., -1.,  0., -0., -0.,  1., -1., -0., -0.])
+    - new=array([-0.,  1.,  0.,  0., -0., -1., -1., -0., -0.])
+
+REF1 is inconsistent!
+  rot:
+    - old=array([ 0., -1.,  0., -0., -0.,  1., -1., -0., -0.])
+    - new=array([-0.,  1.,  0.,  0., -0., -1., -1., -0., -0.])
+
+REF2 is inconsistent!
+  rot:
+    - old=array([ 0., -1.,  0., -0., -0.,  1., -1., -0., -0.])
+    - new=array([-0.,  1.,  0.,  0., -0., -1., -1., -0., -0.])
+
+REF3 is inconsistent!
+  rot:
+    - old=array([ 0., -1.,  0., -0., -0.,  1., -1., -0., -0.])
+    - new=array([-0.,  1.,  0.,  0., -0., -1., -1., -0., -0.])
+
+-------------------------------------------------------------------------------
+checking misisng or added detectors
+old_name_set - new_name_set=set()
+new_name_set - old_name_set={'REG1', 'REH1'}
