@@ -22,7 +22,7 @@ The second step is to retrieve RPC payloads from conddb.
 zsh ./run-conddb-import.zsh
 ```
 
-The third step is dump a payload from a sqlite file to an xml file.
+The third step is to dump a payload from a sqlite file to an xml file.
 Since `RecoIdealGeometry_RPC_v3_hlt` contains all payloads stored in `RecoIdealGeometry_RPC_v2_hlt`, we use `v3` here to extract two payloads of interest.
 ```zsh
 zsh ./run-conddb-dump.zsh
