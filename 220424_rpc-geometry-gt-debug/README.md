@@ -4,6 +4,9 @@
 - [`125X_dataRun3_relval_v4`](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/gts/125X_dataRun3_relval_v4)
     - [`RecoIdealGeometry_RPC_v3_hlt`](https://cms-conddb.cern.ch/cmsDbBrowser/list/Prod/tags/RecoIdealGeometry_RPC_v3_hlt)
 
+- [diff 125X_dataRun3_relval_v1 125X_dataRun3_relval_v4](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/gts/125X_dataRun3_relval_v1/125X_dataRun3_relval_v4)
+- [diff RecoIdealGeometry_RPC_v2_hlt RecoIdealGeometry_RPC_v3_hlt](https://cms-conddb.cern.ch/cmsDbBrowser/diff/Prod/tags/RecoIdealGeometry_RPC_v2_hlt/RecoIdealGeometry_RPC_v3_hlt)
+
 ## Recipe
 First, create a local dev area.
 ```bash
