@@ -1,0 +1,88 @@
+26-Jun-2023 15:50:39 CEST  Initiating request to open file file:/eos/home-s/seyang/store/096fcf57-f25a-465b-bc22-0282560e795b.root
+26-Jun-2023 15:50:42 CEST  Successfully opened file file:/eos/home-s/seyang/store/096fcf57-f25a-465b-bc22-0282560e795b.root
+Begin processing the 1st record. Run 360126, Event 685322500, LumiSection 337 on stream 0 at 26-Jun-2023 15:50:56.537 CEST
+%MSG-e MuonHitFromTrackerMuonAnalyzer:  MuonHitFromTrackerMuonAnalyzer:rpcExt  26-Jun-2023 15:52:00 CEST Run: 360126 Event: 685979155
+roll is nullptr:  Re 1 Ri 1 St 3 Se 5 La 1 Su 3 Ro 1 Tr 0 
+%MSG
+26-Jun-2023 15:53:12 CEST  Closed file file:/eos/home-s/seyang/store/096fcf57-f25a-465b-bc22-0282560e795b.root
+
+TrigReport ---------- Event  Summary ------------
+TrigReport Events total = 7132 passed = 7121 failed = 11
+
+TrigReport ---------- Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+TrigReport     1    0       7132       7121         11          0 p
+
+TrigReport -------End-Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+
+TrigReport ---------- Modules in Path: p ------------
+TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
+TrigReport     1    0       7132       7121         11          0 goodVertices
+TrigReport     1    1       7121       7121          0          0 probeTrackerMuons
+TrigReport     1    2       7121       7121          0          0 rpcExt
+
+TrigReport ---------- Module Summary ------------
+TrigReport    Visited   Executed     Passed     Failed      Error Name
+TrigReport       7132       7132       7132          0          0 TriggerResults
+TrigReport       7132       7132       7121         11          0 goodVertices
+TrigReport       7132       7132       7132          0          0 p
+TrigReport       7121       7121       7121          0          0 probeTrackerMuons
+TrigReport       7121       7121       7121          0          0 rpcExt
+
+TimeReport ---------- Event  Summary ---[sec]----
+TimeReport       event loop CPU/event = 0.011337
+TimeReport      event loop Real/event = 0.020287
+TimeReport     sum Streams Real/event = 0.013563
+TimeReport efficiency CPU/Real/thread = 0.558822
+
+TimeReport ---------- Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport   0.012760     0.012760  p
+TimeReport  per event     per exec  Name
+
+TimeReport -------End-Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport  per event     per exec  Name
+
+TimeReport ---------- Modules in Path: p ---[Real sec]----
+TimeReport  per event    per visit  Name
+TimeReport   0.000074     0.000074  goodVertices
+TimeReport   0.008968     0.008982  probeTrackerMuons
+TimeReport   0.000015     0.000015  rpcExt
+TimeReport  per event    per visit  Name
+
+TimeReport ---------- Module Summary ---[Real sec]----
+TimeReport  per event     per exec    per visit  Name
+TimeReport   0.000002     0.000002     0.000002  TriggerResults
+TimeReport   0.000074     0.000074     0.000074  goodVertices
+TimeReport   0.000001     0.000001     0.000001  p
+TimeReport   0.008968     0.008982     0.008982  probeTrackerMuons
+TimeReport   0.000015     0.000015     0.000015  rpcExt
+TimeReport  per event     per exec    per visit  Name
+
+T---Report end!
+
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 MuonHitFromTrackerMu -e MuonHitFromTrack                       1        1
+    2 fileAction           -s file_close                             1        1
+    3 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 MuonHitFromTrackerMuonAnalyzer 360126/685979155                  
+    2 fileAction           PostGlobalEndRun                  
+    3 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Error                   1                   1
+System                  3                   3
+
+dropped waiting message count 0
