@@ -1,11 +1,10 @@
 from dataclasses import dataclass
 from typing import Optional
-import pandas as pd
 
 
 @dataclass
 class RPCDetId:
-    region: Optional[int]
+    region: int
     sector: Optional[int]
     station: Optional[int]
     roll: str
@@ -15,10 +14,9 @@ class RPCDetId:
     ring: Optional[int]
     channel: Optional[int]
 
-    @staticmethod
-    def parse_barrel_name(name):
+    @classmethod
+    def parse_barrel_name(cls, name: str):
         # name = "W-2_RB1in_S01_Backward"
-        region = 0
         # ("W-2", "RB1in", "S01", "Backward")
         wheel, station_str, sector, roll = name.split('_')
 
@@ -36,33 +34,32 @@ class RPCDetId:
              ## There are suffix, +, -, ++, --, etc
             roll += station_str[3:]
 
-        return dict(region=region, wheel=wheel, sector=sector, station=station,
-                    roll=roll, layer=layer)
+        return cls(region=0, sector=sector, station=station, roll=roll,
+                   wheel=wheel, layer=layer, disk=None, ring=None,
+                   channel=None)
 
-    @staticmethod
-    def parse_endcap_name(name):
+    @classmethod
+    def parse_endcap_name(cls, name):
         d, r, ch, roll = name.split('_')
         signed_disk, ring, channel = int(d[2:]), int(r[1:]), int(ch[2:])
 
         disk = abs(signed_disk)
         region = 1 if signed_disk > 0 else -1
-        return dict(region=region, disk=disk, roll=roll, ring=ring,
+        return cls(region=region, sector=None, station=None, roll=roll,
+                   wheel=None, layer=None, disk=disk, ring=ring,
                     channel=channel)
 
     @classmethod
     def from_name(cls, name: str):
         if name.startswith("W"):
-            fields = cls.parse_barrel_name(name)
-            fields |= {key: None for key in ['disk', 'ring', 'channel']}
+            return cls.parse_barrel_name(name)
         elif name.startswith("RE"):
-            fields = cls.parse_endcap_name(name)
-            fields |= {key: None for key in ['sector', 'station', 'wheel', 'layer']}
+            return cls.parse_endcap_name(name)
         else:
             raise RuntimeError
-        return cls(**fields)
 
     @property
-        def is_barrel(self) -> bool:
+    def is_barrel(self) -> bool:
         return self.region == 0
 
     @property
@@ -71,6 +68,4 @@ class RPCDetId:
 
     @property
     def is_irpc(self) -> bool:
-        return self.is_endcap() and self.disk in (3, 4) and self.ring == 1
-
-
+        return self.is_endcap and self.disk in (3, 4) and self.ring == 1

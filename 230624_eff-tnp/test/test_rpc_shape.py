@@ -17,12 +17,12 @@ file_name = './rpcGeom.txt'
 new_data = []
 df = pd.read_csv(file_name, delimiter=' ', index_col=False)
 
-_, row = next(df.iterrows())
+row = df.iloc[0]
 
 name, raw_id, area = row[['#RollName', 'DetId', 'Area']].to_list()
-xs = row[['x1', 'x2', 'x3', 'x4']].to_list()
-ys = row[['y1', 'y2', 'y3', 'y4']].to_list()
-zs = row[['z1', 'z2', 'z3', 'z4']].to_list()
+xs = row[['x1', 'x2', 'x3', 'x4']].to_numpy().astype(np.float64)
+ys = row[['y1', 'y2', 'y3', 'y4']].to_numpy().astype(np.float64)
+zs = row[['z1', 'z2', 'z3', 'z4']].to_numpy().astype(np.float64)
 
 rpc_id = RPCDetId.from_name(name)
 
