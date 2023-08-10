@@ -55,8 +55,7 @@ process.p = cms.Path(
 )
 
 process.source.fileNames = [
-    # 'file:/eos/home-s/seyang/store/096fcf57-f25a-465b-bc22-0282560e795b.root',
-    'file:/eos/home-s/seyang/store/rpc/230624_eff-tnp/Muon0_Run2023D-PromptReco-v2_AOD_32770777-f732-4f0e-b29e-1522b1d6a5a0.root'
+    'file:/store/scratch/seyang/rpc/230624_eff-tnp/Muon0_Run2023D-PromptReco-v2_AOD_32770777-f732-4f0e-b29e-1522b1d6a5a0.root',
 ]
 #import FWCore.PythonUtilities.LumiList as LumiList
 #process.source.lumisToProcess = LumiList.LumiList(
