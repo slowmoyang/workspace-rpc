@@ -15,7 +15,7 @@ def run(input_path: Path):
 
     output_path = input_path.with_suffix('.csv')
     print(f'writing to {output_path}')
-    df.to_csv(output_path)
+    df.to_csv(output_path, index=False)
 
 
 def main():
